@@ -29,9 +29,9 @@ import Citat from "../components/Citat.astro";
             til misbrug
           </h1>
 
-          <p class="haandskrift">
+          <h2 class="hero_h2">
             – hvad gør du nu?
-          </p>
+          </h2>
 
           <p>
             Rådgivningen Orfeus tilbyder gratis rådgivning
@@ -39,7 +39,7 @@ import Citat from "../components/Citat.astro";
             et misbrug.
           </p>
 
-          <a href="#raadgivning" class="knap">
+          <a href="#omos" class="knap">
             Læs mere
           </a>
         </div>
@@ -63,7 +63,7 @@ import Citat from "../components/Citat.astro";
               anonym rådgivning.
             </p>
 
-            <a href="#raadgivning" class="knap lys">
+            <a href="#omos" class="knap lys">
               Se vores rådgivning
             </a>
           </div>
@@ -79,7 +79,7 @@ import Citat from "../components/Citat.astro";
       <!-- TILBUD -->
       <section
         class="tilbud-sektion"
-        id="raadgivning"
+        id="omos"
       >
         <div class="container tilbud-grid">
 
@@ -150,7 +150,7 @@ import Citat from "../components/Citat.astro";
 
 
       <!-- RÅD OG TIPS -->
-      <section class="indhold groen-baggrund">
+      <section class="indhold green-baggrund">
         <div class="container indhold-grid omvendt">
 
           <img
@@ -237,7 +237,7 @@ import Citat from "../components/Citat.astro";
 
 
       <!-- RÅDGIVERE -->
-      <section class="indhold groen-baggrund">
+      <section class="indhold green-baggrund">
         <div class="container indhold-grid">
 
           <div class="tekst">
@@ -270,9 +270,9 @@ import Citat from "../components/Citat.astro";
 
 <style is:global>
   :root {
-    --groen: #244b32;
+    --green: #244b32;
     --orange: #ed7939;
-    --lys-groen: #b9cdb4;
+    --lys-green: #b9cdb4;
     --hvid: #ffffff;
     --tekst: #25392c;
   }
@@ -345,7 +345,7 @@ import Citat from "../components/Citat.astro";
     max-width: 430px;
   }
 
-  .haandskrift {
+  .hero_h2 {
     font-style: italic;
     font-size: 1.3rem;
   }
@@ -354,7 +354,7 @@ import Citat from "../components/Citat.astro";
   /* INTRO */
 
   .intro {
-    background: var(--groen);
+    background: var(--green);
     color: white;
     padding: 5rem 0;
   }
@@ -375,7 +375,7 @@ import Citat from "../components/Citat.astro";
   /* TILBUD */
 
   .tilbud-sektion {
-    background: var(--groen);
+    background: var(--green);
     color: white;
     padding: 2rem 0 5rem;
   }
@@ -409,11 +409,11 @@ import Citat from "../components/Citat.astro";
   }
 
   .lys-baggrund {
-    background: var(--lys-groen);
+    background: var(--lys-green);
   }
 
-  .groen-baggrund {
-    background: var(--groen);
+  .green-baggrund {
+    background: var(--green);
     color: white;
   }
 
@@ -430,7 +430,7 @@ import Citat from "../components/Citat.astro";
     margin-top: 1rem;
     padding: 0.6rem 1rem;
 
-    background: var(--groen);
+    background: var(--green);
     color: white;
 
     text-decoration: none;
@@ -441,7 +441,7 @@ import Citat from "../components/Citat.astro";
   }
 
   .knap.lys {
-    background: var(--lys-groen);
+    background: var(--lys-green);
     color: var(--tekst);
   }
 
