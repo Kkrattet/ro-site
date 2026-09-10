@@ -1,52 +1,474 @@
 ---
-import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import Card from "../components/Card.astro";
-import astronaut from "../assets/Billed1.png";
-
+import Footer from "../components/Footer.astro";
+import Tilbud from "../components/Tilbud.astro";
+import Citat from "../components/Citat.astro";
 ---
 
 <html lang="da">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>RO - Rådgivningen Orfeus</title>
-	</head>
-	<body>
-		<main>
-			<section>
-				<Card
-  headline="Her er en overskrift"
-  tekst="Her er der også noget"
-  image={astronaut}
-/>
-			</section>
-		</main>
-		<h1>Astro</h1>
-		<header></header>
-		<main>
-			<section class="hero">
-			<h1></h1>
-			<h2></h2>
-			<p></p>
-			<button></button>
-			</section>
-			<section class="citat">
-				<h2></h2>
-				<p></p>
-			</section>
-			<section>
-				
-			</section>
-		
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-		</main>
-		<footer></footer>
+    <title>Rådgivningen Orfeus</title>
+  </head>
 
-		<h1>Astro - hej</h1>
+  <body>
+    <Header />
 
-	</body>
+    <main>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-indhold">
+          <h1>
+            Pårørende<br />
+            til misbrug
+          </h1>
+
+          <p class="haandskrift">
+            – hvad gør du nu?
+          </p>
+
+          <p>
+            Rådgivningen Orfeus tilbyder gratis rådgivning
+            til dig, der er pårørende til en person med
+            et misbrug.
+          </p>
+
+          <a href="#raadgivning" class="knap">
+            Læs mere
+          </a>
+        </div>
+      </section>
+
+
+      <!-- INTRO -->
+      <section class="intro">
+        <div class="container intro-grid">
+
+          <div>
+            <h2>Ingen skal stå alene</h2>
+
+            <p>
+              Er du tæt på en person, der har et problematisk
+              forbrug eller et misbrug?
+            </p>
+
+            <p>
+              Hos Rådgivningen Orfeus kan du få gratis og
+              anonym rådgivning.
+            </p>
+
+            <a href="#raadgivning" class="knap lys">
+              Se vores rådgivning
+            </a>
+          </div>
+
+          <div class="logo-stor">
+            RO
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- TILBUD -->
+      <section
+        class="tilbud-sektion"
+        id="raadgivning"
+      >
+        <div class="container tilbud-grid">
+
+          <Tilbud
+            titel="Online"
+            billede="/images/online.jpg"
+          >
+            Få rådgivning online, hvis du gerne vil kunne
+            deltage hjemmefra.
+          </Tilbud>
+
+          <Tilbud
+            titel="Individuelt"
+            billede="/images/individuel.jpg"
+          >
+            Få en individuel samtale med fokus på dig og
+            din situation.
+          </Tilbud>
+
+          <Tilbud
+            titel="Gruppe"
+            billede="/images/gruppe.jpg"
+          >
+            Mød andre pårørende og del erfaringer i et
+            trygt fællesskab.
+          </Tilbud>
+
+        </div>
+      </section>
+
+
+      <!-- CITAT -->
+      <Citat
+        tekst="Ikke alle mennesker ved, at de er pårørende."
+      />
+
+
+      <!-- KENDER DU DET -->
+      <section class="indhold lys-baggrund">
+        <div class="container indhold-grid">
+
+          <div class="tekst">
+            <h2>Kender du det?</h2>
+
+            <p>
+              Måske fylder din pårørendes misbrug mere og mere
+              i din hverdag.
+            </p>
+
+            <p>
+              Det kan være svært at vide, hvad man skal gøre,
+              og hvor grænsen går mellem at hjælpe og samtidig
+              passe på sig selv.
+            </p>
+
+            <a href="#" class="knap">
+              Læs mere
+            </a>
+          </div>
+
+          <img
+            src="/images/kender-du-det.jpg"
+            alt="Person i naturen"
+          />
+
+        </div>
+      </section>
+
+
+      <!-- RÅD OG TIPS -->
+      <section class="indhold groen-baggrund">
+        <div class="container indhold-grid omvendt">
+
+          <img
+            src="/images/tips.jpg"
+            alt="Skygge på en væg"
+          />
+
+          <div class="tekst">
+            <h2>Få råd og tips</h2>
+
+            <p>
+              Som pårørende kan det være svært at finde ud af,
+              hvordan man bedst håndterer situationen.
+            </p>
+
+            <p>
+              Vi har samlet forskellige råd, som måske kan
+              hjælpe dig.
+            </p>
+
+            <a href="#" class="knap lys">
+              Læs mere
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- HISTORIER -->
+      <section class="indhold orange-baggrund">
+        <div class="container indhold-grid">
+
+          <div class="tekst">
+            <h2>Personlige historier</h2>
+
+            <p>
+              Andre pårørende har stået i situationer,
+              der måske minder om din.
+            </p>
+
+            <p>
+              Her kan du læse deres historier og erfaringer.
+            </p>
+
+            <a href="#" class="knap">
+              Læs historier
+            </a>
+          </div>
+
+          <img
+            src="/images/historier.jpg"
+            alt="Personlig historie"
+          />
+
+        </div>
+      </section>
+
+
+      <!-- OM FORENINGEN -->
+      <section class="indhold lys-baggrund">
+        <div class="container indhold-grid omvendt">
+
+          <img
+            src="/images/foreningen.jpg"
+            alt="Rådgivningen Orfeus"
+          />
+
+          <div class="tekst">
+            <h2>Om foreningen</h2>
+
+            <p>
+              Rådgivningen Orfeus arbejder for, at pårørende
+              til mennesker med misbrug ikke skal stå alene.
+            </p>
+
+            <a href="#" class="knap">
+              Læs mere
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- RÅDGIVERE -->
+      <section class="indhold groen-baggrund">
+        <div class="container indhold-grid">
+
+          <div class="tekst">
+            <h2>Mød rådgiverne</h2>
+
+            <p>
+              Vores rådgivere har erfaring med at hjælpe
+              mennesker, der står tæt på en person med
+              misbrugsproblemer.
+            </p>
+
+            <a href="#" class="knap lys">
+              Mød os
+            </a>
+          </div>
+
+          <img
+            src="/images/raadgiver.jpg"
+            alt="En rådgiver"
+          />
+
+        </div>
+      </section>
+
+    </main>
+
+    <Footer />
+  </body>
 </html>
+
+<style is:global>
+  :root {
+    --groen: #244b32;
+    --orange: #ed7939;
+    --lys-groen: #b9cdb4;
+    --hvid: #ffffff;
+    --tekst: #25392c;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--tekst);
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin-top: 0;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  .container {
+    width: min(90%, 1100px);
+    margin-inline: auto;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+
+    background:
+      linear-gradient(
+        rgba(25, 45, 30, 0.25),
+        rgba(25, 45, 30, 0.45)
+      ),
+      url("/images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-indhold {
+    width: min(90%, 1100px);
+    margin-inline: auto;
+  }
+
+  .hero h1 {
+    text-transform: uppercase;
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    line-height: 0.95;
+  }
+
+  .hero p {
+    max-width: 430px;
+  }
+
+  .haandskrift {
+    font-style: italic;
+    font-size: 1.3rem;
+  }
+
+
+  /* INTRO */
+
+  .intro {
+    background: var(--groen);
+    color: white;
+    padding: 5rem 0;
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .logo-stor {
+    font-size: 7rem;
+    text-align: center;
+  }
+
+
+  /* TILBUD */
+
+  .tilbud-sektion {
+    background: var(--groen);
+    color: white;
+    padding: 2rem 0 5rem;
+  }
+
+  .tilbud-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+
+  /* GENERELLE INDHOLDSSEKTIONER */
+
+  .indhold {
+    padding: 6rem 0;
+  }
+
+  .indhold-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .indhold-grid img {
+    width: 100%;
+  }
+
+  .indhold h2 {
+    font-size: 2rem;
+  }
+
+  .lys-baggrund {
+    background: var(--lys-groen);
+  }
+
+  .groen-baggrund {
+    background: var(--groen);
+    color: white;
+  }
+
+  .orange-baggrund {
+    background: var(--orange);
+    color: white;
+  }
+
+
+  /* KNAPPER */
+
+  .knap {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1rem;
+
+    background: var(--groen);
+    color: white;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+
+  .knap.lys {
+    background: var(--lys-groen);
+    color: var(--tekst);
+  }
+
+
+  /* MOBIL */
+
+  @media (max-width: 700px) {
+    .intro-grid,
+    .tilbud-grid,
+    .indhold-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .indhold-grid.omvendt img {
+      order: 2;
+    }
+
+    .indhold-grid.omvendt .tekst {
+      order: 1;
+    }
+
+    .hero {
+      min-height: 500px;
+    }
+
+    .indhold {
+      padding: 4rem 0;
+    }
+  }
+</style>

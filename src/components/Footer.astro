@@ -1,0 +1,82 @@
+<footer>
+
+  <div class="footer-indhold">
+
+    <div class="footer-logo">
+      <strong>RO</strong>
+
+      <p>
+        Rådgivningen Orfeus
+      </p>
+    </div>
+
+
+    <div>
+      <h3>Kontakt</h3>
+
+      <p>
+        Telefon: 12 34 56 78
+      </p>
+
+      <p>
+        kontakt@orfeus.dk
+      </p>
+    </div>
+
+
+    <div>
+      <h3>Find os</h3>
+
+      <p>
+        Facebook
+      </p>
+
+      <p>
+        Instagram
+      </p>
+    </div>
+
+  </div>
+
+</footer>
+
+<style>
+  footer {
+    background: #244b32;
+    color: white;
+
+    padding: 4rem 0;
+  }
+
+  .footer-indhold {
+    width: min(90%, 1100px);
+    margin-inline: auto;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .footer-logo strong {
+    display: block;
+
+    font-size: 4rem;
+    font-weight: normal;
+  }
+
+  h3 {
+    margin-top: 0;
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 600px) {
+    .footer-indhold {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

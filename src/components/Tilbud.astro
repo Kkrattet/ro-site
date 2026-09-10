@@ -1,0 +1,72 @@
+---
+const {
+  titel,
+  billede
+} = Astro.props;
+---
+
+<article class="tilbud">
+
+  <img
+    src={billede}
+    alt={titel}
+  />
+
+  <div class="tilbud-tekst">
+
+    <h2>{titel}</h2>
+
+    <p>
+      <slot />
+    </p>
+
+    <a href="#" class="laes-mere">
+      Læs mere
+    </a>
+
+  </div>
+
+</article>
+
+<style>
+  .tilbud img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+
+  .tilbud-tekst {
+    padding-top: 1rem;
+  }
+
+  h2 {
+    margin-bottom: 0.5rem;
+
+    color: white;
+
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 0.1em;
+  }
+
+  p {
+    color: #e87939;
+    line-height: 1.5;
+    font-size: 0.9rem;
+  }
+
+  .laes-mere {
+    display: inline-block;
+
+    padding: 0.5rem 0.8rem;
+
+    background: #e87939;
+    color: white;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-size: 0.65rem;
+    font-weight: bold;
+  }
+</style>
