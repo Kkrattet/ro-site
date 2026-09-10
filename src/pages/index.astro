@@ -1,4 +1,8 @@
 ---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Card from "../components/Card.astro";
+import astronaut from "../assets/astronaut.png";
 
 ---
 
@@ -12,6 +16,15 @@
 		<title>RO - Rådgivningen Orfeus</title>
 	</head>
 	<body>
+		<main>
+			<section>
+				<Card
+  headline="Her er en overskrift"
+  tekst="Her er der også noget"
+  image={astronaut}
+/>
+			</section>
+		</main>
 		<h1>Astro</h1>
 	</body>
 </html>
