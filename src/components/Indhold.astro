@@ -1,0 +1,47 @@
+---
+const {
+  titel,
+  tekst = [],
+  billede,
+  alt = "",
+  knapTekst,
+  link = "#",
+  baggrund = "lys",
+  omvendt = false,
+  lysKnap = false,
+} = Astro.props;
+
+const baggrundClass = `${baggrund}-baggrund`;
+const knapClass = lysKnap ? "knap lys" : "knap";
+---
+
+<section class={`indhold ${baggrundClass}`}>
+  <div class={`container indhold-grid ${omvendt ? "omvendt" : ""}`}>
+
+    {omvendt && (
+      <img
+        src={billede}
+        alt={alt}
+      />
+    )}
+
+    <div class="tekst">
+      <h2>{titel}</h2>
+{tekst.map((afsnit: string) => (
+  <p>{afsnit}</p>
+))}
+
+      <a href={link} class={knapClass}>
+        {knapTekst}
+      </a>
+    </div>
+
+    {!omvendt && (
+      <img
+        src={billede}
+        alt={alt}
+      />
+    )}
+
+  </div>
+</section>

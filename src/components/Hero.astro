@@ -1,0 +1,33 @@
+---
+const {
+  titelLinje1 = "Pårørende",
+  titelLinje2 = "til misbrug",
+  undertitel = "– hvad gør du nu?",
+  tekst = "Rådgivningen Orfeus tilbyder gratis rådgivning til dig, der er pårørende til en person med et misbrug.",
+  knapTekst = "Læs mere",
+  link = "#omos",
+} = Astro.props;
+---
+
+<section class="hero">
+  <div class="hero-indhold">
+
+    <h1>
+      {titelLinje1}<br />
+      {titelLinje2}
+    </h1>
+
+    <h2 class="hero_h2">
+      {undertitel}
+    </h2>
+
+    <p>
+      {tekst}
+    </p>
+
+    <a href={link} class="knap">
+      {knapTekst}
+    </a>
+
+  </div>
+</section>

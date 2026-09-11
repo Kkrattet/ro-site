@@ -1,80 +1,36 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+
 import Tilbud from "../components/Tilbud.astro";
 import Citat from "../components/Citat.astro";
+import Indhold from "../components/Indhold.astro";
+import PageLayout from "../layout/PageLayout.astro";
+import  Hero from "../components/Hero.astro";
+import Intro from "../components/Intro.astro"
 ---
 
-<html lang="da">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-
-    <title>Rådgivningen Orfeus</title>
-  </head>
-
-  <body>
-    <Header />
-
+ <PageLayout>
     <main>
 
-      <!-- HERO -->
-      <section class="hero">
-        <div class="hero-indhold">
-          <h1>
-            Pårørende<br />
-            til misbrug
-          </h1>
-
-          <h2 class="hero_h2">
-            – hvad gør du nu?
-          </h2>
-
-          <p>
-            Rådgivningen Orfeus tilbyder gratis rådgivning
-            til dig, der er pårørende til en person med
-            et misbrug.
-          </p>
-
-          <a href="#omos" class="knap">
-            Læs mere
-          </a>
-        </div>
-      </section>
+      <Hero
+  titelLinje1="Pårørende"
+  titelLinje2="til misbrug"
+  undertitel="– hvad gør du nu?"
+  tekst="Rådgivningen Orfeus tilbyder gratis rådgivning til dig, der er pårørende til en person med et misbrug."
+  knapTekst="Læs mere"
+  link="#omos"
+/>
 
 
-      <!-- INTRO -->
-      <section class="intro">
-        <div class="container intro-grid">
-
-          <div>
-            <h2>Ingen skal stå alene</h2>
-
-            <p>
-              Er du tæt på en person, der har et problematisk
-              forbrug eller et misbrug?
-            </p>
-
-            <p>
-              Hos Rådgivningen Orfeus kan du få gratis og
-              anonym rådgivning.
-            </p>
-
-            <a href="#omos" class="knap lys">
-              Se vores rådgivning
-            </a>
-          </div>
-
-          <div class="logo-stor">
-            RO
-          </div>
-
-        </div>
-      </section>
-
+     <Intro
+  titel="Ingen skal stå alene"
+  tekst={[
+    "Er du tæt på en person, der har et problematisk forbrug eller et misbrug?",
+    "Hos Rådgivningen Orfeus kan du få gratis og anonym rådgivning."
+  ]}
+  knapTekst="Se vores rådgivning"
+  link="#omos"
+  logoTekst="RO"
+/>
 
       <!-- TILBUD -->
       <section
@@ -115,158 +71,80 @@ import Citat from "../components/Citat.astro";
       <Citat
         tekst="Ikke alle mennesker ved, at de er pårørende."
       />
+<!-- KENDER DU DET -->
+<Indhold
+  titel="Kender du det?"
+  tekst={[
+    "Måske fylder din pårørendes misbrug mere og mere i din hverdag.",
+    "Det kan være svært at vide, hvad man skal gøre, og hvor grænsen går mellem at hjælpe og samtidig passe på sig selv."
+  ]}
+  billede="/images/kender-du-det.jpg"
+  alt="Person i naturen"
+  knapTekst="Læs mere"
+  baggrund="lys"
+/>
 
 
-      <!-- KENDER DU DET -->
-      <section class="indhold lys-baggrund">
-        <div class="container indhold-grid">
-
-          <div class="tekst">
-            <h2>Kender du det?</h2>
-
-            <p>
-              Måske fylder din pårørendes misbrug mere og mere
-              i din hverdag.
-            </p>
-
-            <p>
-              Det kan være svært at vide, hvad man skal gøre,
-              og hvor grænsen går mellem at hjælpe og samtidig
-              passe på sig selv.
-            </p>
-
-            <a href="#" class="knap">
-              Læs mere
-            </a>
-          </div>
-
-          <img
-            src="/images/kender-du-det.jpg"
-            alt="Person i naturen"
-          />
-
-        </div>
-      </section>
+<!-- RÅD OG TIPS -->
+<Indhold
+  titel="Få råd og tips"
+  tekst={[
+    "Som pårørende kan det være svært at finde ud af, hvordan man bedst håndterer situationen.",
+    "Vi har samlet forskellige råd, som måske kan hjælpe dig."
+  ]}
+  billede="/images/tips.jpg"
+  alt="Skygge på en væg"
+  knapTekst="Læs mere"
+  baggrund="green"
+  omvendt
+  lysKnap
+/>
 
 
-      <!-- RÅD OG TIPS -->
-      <section class="indhold green-baggrund">
-        <div class="container indhold-grid omvendt">
-
-          <img
-            src="/images/tips.jpg"
-            alt="Skygge på en væg"
-          />
-
-          <div class="tekst">
-            <h2>Få råd og tips</h2>
-
-            <p>
-              Som pårørende kan det være svært at finde ud af,
-              hvordan man bedst håndterer situationen.
-            </p>
-
-            <p>
-              Vi har samlet forskellige råd, som måske kan
-              hjælpe dig.
-            </p>
-
-            <a href="#" class="knap lys">
-              Læs mere
-            </a>
-          </div>
-
-        </div>
-      </section>
+<!-- HISTORIER -->
+<Indhold
+  titel="Personlige historier"
+  tekst={[
+    "Andre pårørende har stået i situationer, der måske minder om din.",
+    "Her kan du læse deres historier og erfaringer."
+  ]}
+  billede="/images/historier.jpg"
+  alt="Personlig historie"
+  knapTekst="Læs historier"
+  baggrund="orange"
+/>
 
 
-      <!-- HISTORIER -->
-      <section class="indhold orange-baggrund">
-        <div class="container indhold-grid">
-
-          <div class="tekst">
-            <h2>Personlige historier</h2>
-
-            <p>
-              Andre pårørende har stået i situationer,
-              der måske minder om din.
-            </p>
-
-            <p>
-              Her kan du læse deres historier og erfaringer.
-            </p>
-
-            <a href="#" class="knap">
-              Læs historier
-            </a>
-          </div>
-
-          <img
-            src="/images/historier.jpg"
-            alt="Personlig historie"
-          />
-
-        </div>
-      </section>
+<!-- OM FORENINGEN -->
+<Indhold
+  titel="Om foreningen"
+  tekst={[
+    "Rådgivningen Orfeus arbejder for, at pårørende til mennesker med misbrug ikke skal stå alene."
+  ]}
+  billede="/images/foreningen.jpg"
+  alt="Rådgivningen Orfeus"
+  knapTekst="Læs mere"
+  baggrund="lys"
+  omvendt
+/>
 
 
-      <!-- OM FORENINGEN -->
-      <section class="indhold lys-baggrund">
-        <div class="container indhold-grid omvendt">
-
-          <img
-            src="/images/foreningen.jpg"
-            alt="Rådgivningen Orfeus"
-          />
-
-          <div class="tekst">
-            <h2>Om foreningen</h2>
-
-            <p>
-              Rådgivningen Orfeus arbejder for, at pårørende
-              til mennesker med misbrug ikke skal stå alene.
-            </p>
-
-            <a href="#" class="knap">
-              Læs mere
-            </a>
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- RÅDGIVERE -->
-      <section class="indhold green-baggrund">
-        <div class="container indhold-grid">
-
-          <div class="tekst">
-            <h2>Mød rådgiverne</h2>
-
-            <p>
-              Vores rådgivere har erfaring med at hjælpe
-              mennesker, der står tæt på en person med
-              misbrugsproblemer.
-            </p>
-
-            <a href="#" class="knap lys">
-              Mød os
-            </a>
-          </div>
-
-          <img
-            src="/images/raadgiver.jpg"
-            alt="En rådgiver"
-          />
-
-        </div>
-      </section>
+<!-- RÅDGIVERE -->
+<Indhold
+  titel="Mød rådgiverne"
+  tekst={[
+    "Vores rådgivere har erfaring med at hjælpe mennesker, der står tæt på en person med misbrugsproblemer."
+  ]}
+  billede="/images/raadgiver.jpg"
+  alt="En rådgiver"
+  knapTekst="Mød os"
+  baggrund="green"
+  lysKnap
+/>
 
     </main>
 
-    <Footer />
-  </body>
-</html>
+  </PageLayout>
 
 <style is:global>
   :root {
@@ -277,6 +155,9 @@ import Citat from "../components/Citat.astro";
     --tekst: #25392c;
   }
 
+
+
+
   * {
     box-sizing: border-box;
   }
@@ -285,11 +166,7 @@ import Citat from "../components/Citat.astro";
     scroll-behavior: smooth;
   }
 
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: var(--tekst);
-  }
+
 
   h1,
   h2,
@@ -339,6 +216,7 @@ import Citat from "../components/Citat.astro";
     text-transform: uppercase;
     font-size: clamp(2.8rem, 7vw, 5rem);
     line-height: 0.95;
+    font-family: 'DM Sans', sans-serif;
   }
 
   .hero p {
@@ -346,8 +224,11 @@ import Citat from "../components/Citat.astro";
   }
 
   .hero_h2 {
-    font-style: italic;
-    font-size: 1.3rem;
+    font-size: 3rem;
+    font-family: 'Patrick Hand', cursive;
+    text-transform: uppercase;
+  
+
   }
 
 

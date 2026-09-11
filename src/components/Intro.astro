@@ -1,0 +1,31 @@
+---
+const {
+  titel = "Ingen skal stå alene",
+  tekst = [],
+  knapTekst = "Se vores rådgivning",
+  link = "#omos",
+  logoTekst = "RO",
+} = Astro.props;
+---
+
+<section class="intro">
+  <div class="container intro-grid">
+
+    <div>
+      <h2>{titel}</h2>
+
+      {tekst.map((afsnit: string) => (
+        <p>{afsnit}</p>
+      ))}
+
+      <a href={link} class="knap lys">
+        {knapTekst}
+      </a>
+    </div>
+
+    <div class="logo-stor">
+      {logoTekst}
+    </div>
+
+  </div>
+</section>
