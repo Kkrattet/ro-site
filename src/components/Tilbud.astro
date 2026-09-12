@@ -14,8 +14,6 @@ const {
 
   <div class="tilbud-tekst">
 
-    <h2>{titel}</h2>
-
     <p>
       <slot />
     </p>
@@ -39,17 +37,15 @@ const {
     padding-top: 1rem;
   }
 
-  h2 {
+  .tilbud h2 {
     margin-bottom: 0.5rem;
-
     color: white;
-
     text-transform: uppercase;
     font-style: italic;
     letter-spacing: 0.1em;
   }
 
-  p {
+  .tilbud p {
     color: #e87939;
     line-height: 1.5;
     font-size: 0.9rem;
@@ -57,10 +53,9 @@ const {
 
   .laes-mere {
     display: inline-block;
-
     padding: 0.5rem 0.8rem;
 
-    background: #e87939;
+    background-color: #e87939;
     color: white;
 
     text-decoration: none;

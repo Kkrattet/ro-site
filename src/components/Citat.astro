@@ -8,13 +8,8 @@ const {
 
   <div class="citat-indhold">
 
-    <p>
-      {tekst}
+    <p>"{tekst}"
     </p>
-
-    <a href="#" class="knap">
-      Læs mere
-    </a>
 
   </div>
 
@@ -26,9 +21,12 @@ const {
 
     background: #ed7939;
     color: white;
+    font-family: 'Patrick Hand', cursive;
+    text-transform: uppercase;
 
     text-align: center;
   }
+  
 
   .citat-indhold {
     max-width: 800px;
@@ -42,20 +40,5 @@ const {
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-  }
-
-  .knap {
-    display: inline-block;
-
-    padding: 0.5rem 1rem;
-
-    background: #244b32;
-    color: white;
-
-    text-decoration: none;
-    text-transform: uppercase;
-
-    font-size: 0.65rem;
-    font-weight: bold;
   }
 </style>

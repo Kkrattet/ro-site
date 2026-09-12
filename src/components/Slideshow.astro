@@ -1,0 +1,49 @@
+<div class="slideshow">
+
+  <div class="slide">
+    <img src="src/assets/høralberte.png" alt="Personlig historie - Alberte" />
+  </div>
+
+  <div class="slide">
+    <img src="src/assets/hørpeter.png" alt="Personlig historie - Peter" />
+  </div>
+
+  <div class="slide">
+    <img src="src/assets/hørullas.png" alt="Personlig historie - Ulla" />
+  </div>
+
+</div>
+
+<script>
+  let slideIndex = 0;
+  let slides = document.querySelectorAll<HTMLElement>(".slide");
+
+  function slideshow() {
+
+    slides.forEach((slide) => {
+      slide.style.display = "none";
+    });
+
+    slides[slideIndex].style.display = "block";
+
+    slideIndex++;
+
+    if (slideIndex == slides.length) {
+      slideIndex = 0;
+    }
+  }
+
+  slideshow();
+
+  setInterval(slideshow, 4000);
+</script>
+
+<style>
+  .slide {
+    display: none;
+  }
+
+  .slide img {
+    width: 100%;
+  }
+</style>

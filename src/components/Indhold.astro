@@ -1,9 +1,14 @@
 ---
+import Advisor from "./Advisor.astro";
+import Slideshow from "./Slideshow.astro";
+
 const {
   titel,
   tekst = [],
   billede,
   alt = "",
+  slideshow = false,
+  advisor = false,
   knapTekst,
   link = "#",
   baggrund = "lys",
@@ -16,32 +21,78 @@ const knapClass = lysKnap ? "knap lys" : "knap";
 ---
 
 <section class={`indhold ${baggrundClass}`}>
+
   <div class={`container indhold-grid ${omvendt ? "omvendt" : ""}`}>
 
     {omvendt && (
-      <img
-        src={billede}
-        alt={alt}
-      />
+      advisor ? (
+        <Advisor />
+      ) : slideshow ? (
+        <Slideshow />
+      ) : (
+        <img src={billede} alt={alt} />
+      )
     )}
 
     <div class="tekst">
+
       <h2>{titel}</h2>
-{tekst.map((afsnit: string) => (
-  <p>{afsnit}</p>
-))}
+
+      {tekst.map((afsnit: string) => (
+        <p>{afsnit}</p>
+      ))}
 
       <a href={link} class={knapClass}>
         {knapTekst}
       </a>
+
     </div>
 
     {!omvendt && (
-      <img
-        src={billede}
-        alt={alt}
-      />
+      advisor ? (
+        <Advisor />
+      ) : slideshow ? (
+        <Slideshow />
+      ) : (
+        <img src={billede} alt={alt} />
+      )
     )}
 
   </div>
+
 </section>
+
+<style>
+  .indhold {
+    padding: 6rem 0;
+  }
+
+  .indhold-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .indhold-grid img {
+    width: 100%;
+  }
+
+  .indhold h2 {
+    font-size: 2rem;
+  }
+
+  .lys-baggrund {
+    background: var(--lys-green);
+  }
+
+  .green-baggrund {
+    background: var(--green);
+    color: white;
+  }
+
+  .orange-baggrund {
+    background: var(--orange);
+    color: white;
+  }
+</style>

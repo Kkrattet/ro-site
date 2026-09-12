@@ -1,13 +1,14 @@
 ---
 const {
-  titelLinje1 = "Pårørende",
-  titelLinje2 = "til misbrug",
-  undertitel = "– hvad gør du nu?",
-  tekst = "Rådgivningen Orfeus tilbyder gratis rådgivning til dig, der er pårørende til en person med et misbrug.",
-  knapTekst = "Læs mere",
-  link = "#omos",
+  titelLinje1,
+  titelLinje2,
+  undertitel,
+  tekst,
+  knapTekst,
+  link
 } = Astro.props;
 ---
+
 
 <section class="hero">
   <div class="hero-indhold">
@@ -16,7 +17,6 @@ const {
       {titelLinje1}<br />
       {titelLinje2}
     </h1>
-
     <h2 class="hero_h2">
       {undertitel}
     </h2>
@@ -31,3 +31,52 @@ const {
 
   </div>
 </section>
+<style>
+/* HERO */
+
+  .hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+
+    background:
+      linear-gradient(
+        rgba(25, 45, 30, 0.25),
+        rgba(25, 45, 30, 0.45)
+      ),
+      url("src/assets/hero.png");
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-indhold {
+    width: min(90%, 1100px);
+    margin-inline: auto;
+    
+  }
+
+  .hero h1 {
+    text-transform: uppercase;
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    line-height: 0.95;
+    font-family: 'DM Sans', sans-serif;
+    margin-bottom: 0.1rem;
+    
+  }
+
+  .hero p {
+    max-width: 430px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .hero_h2 {
+    font-size: 3rem;
+    font-family: 'Patrick Hand';
+    text-transform: uppercase;
+    font-style: italic;
+  }
+  </style>
