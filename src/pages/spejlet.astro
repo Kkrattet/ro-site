@@ -1,0 +1,185 @@
+---
+import PageLayout from "../layout/PageLayout.astro";
+import Indhold from "../components/Indhold.astro";
+---
+
+<PageLayout title="Spejlet | RO">
+
+  <section class="spejlet-hero">
+    <div class="container">
+      <h1>Spejlet</h1>
+      <p>
+        Mød andre pårørende, hør deres historier og få råd fra både
+        pårørende og rådgivere.
+      </p>
+    </div>
+  </section>
+
+  <section class="video-sektion">
+    <div class="container">
+
+      <h2>Hør deres historier</h2>
+
+      <div class="video-grid">
+
+        <article class="video-kort">
+          <video controls>
+            <source src="/video/video1.mp4" type="video/mp4" />
+          </video>
+
+          <h3>At være partner</h3>
+
+          <p>
+            En personlig fortælling om at stå tæt på et menneske med misbrug.
+          </p>
+        </article>
+
+        <article class="video-kort">
+          <video controls>
+            <source src="/video/video2.mp4" type="video/mp4" />
+          </video>
+
+          <h3>At være forælder</h3>
+
+          <p>
+            Om bekymringer, håb og om at lære at passe på sig selv.
+          </p>
+        </article>
+
+        <article class="video-kort">
+          <video controls>
+            <source src="/video/video3.mp4" type="video/mp4" />
+          </video>
+
+          <h3>At være voksen barn</h3>
+
+          <p>
+            En fortælling om at vokse op tæt på afhængighed.
+          </p>
+        </article>
+
+        <article class="video-kort">
+          <video controls>
+            <source src="/video/video4.mp4" type="video/mp4" />
+          </video>
+
+          <h3>At finde sig selv igen</h3>
+
+          <p>
+            Om grænser, støtte og om at finde ro midt i det svære.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <Indhold
+    titel="Råd fra pårørende"
+    tekst={[
+      "Du kan ikke styre et andet menneskes valg, men du kan begynde at passe på dig selv.",
+
+      "Tal med nogen om det, du står i. Det kan gøre en stor forskel at møde mennesker, som forstår situationen.",
+
+      "Dine egne behov og grænser er også vigtige. Det er okay at sige fra og tage plads til dig selv."
+    ]}
+    baggrund="orange"
+  />
+
+  <Indhold
+    titel="Råd fra rådgiverne"
+    tekst={[
+      "Prøv at skelne mellem det, du kan påvirke, og det, du ikke kan kontrollere.",
+
+      "Vær opmærksom på dine egne grænser og på, hvordan situationen påvirker din hverdag.",
+
+      "Du behøver ikke stå alene. Rådgivning og fællesskab med andre pårørende kan give nye perspektiver og støtte."
+    ]}
+    baggrund="green"
+  />
+
+  <Indhold
+    titel="Har du brug for nogen at tale med?"
+    tekst={[
+      "Hos RO kan du få støtte og rådgivning, hvis du lever tæt på et menneske med misbrug."
+    ]}
+    knapTekst="Se vores rådgivning"
+    link="/help"
+    baggrund="lys"
+  />
+
+</PageLayout>
+
+<style>
+
+  .spejlet-hero {
+    background-color: var(--green);
+    color: white;
+    padding: 9rem 0 5rem;
+  }
+
+  .spejlet-hero h1 {
+    font-family: "Caveat", cursive;
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .spejlet-hero p {
+    max-width: 600px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.2rem;
+  }
+
+  .video-sektion {
+    padding: 6rem 0;
+    background-color: white;
+  }
+
+  .video-sektion h2 {
+    color: var(--green);
+    font-family: "Caveat", cursive;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  .video-kort video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background-color: black;
+  }
+
+  .video-kort h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--green);
+    font-family: "DM Sans", sans-serif;
+  }
+
+  .video-kort p {
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 700px) {
+
+    .video-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .spejlet-hero h1 {
+      font-size: 3rem;
+    }
+
+  }
+
+</style>

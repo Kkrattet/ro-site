@@ -1,0 +1,189 @@
+---
+import  PageLayout from "../layout/PageLayout.astro";
+import  Indhold  from "../components/Indhold.astro";
+import  Intro  from "../components/Intro.astro";
+import Advisor from "../components/Advisor.astro";
+---
+<PageLayout>
+   <section class="hjælp-hero">
+    <div class="container">
+      <h1>Hjælpen</h1>
+      <p>
+        Bliv klogere på rådgivningen. Hvad vi kan tilbyde, hvad vi forventer af dig og hvordan du kommer igang. Vi tilbyder rådgivning: individuelt, online og i grupper. Se mere herunder. 
+      </p>
+    </div>
+  </section>
+    
+<!-- Individuelt -->
+ <Indhold
+  titel="Individuel rådgivning"
+  tekst={[
+    "Som pårørende kan du stå meget alene med din problematik og have holdt inde med rigtig mange tanker og følelser over lang tid. Derfor er en enkel samtale ikke altid nok. I det individuelle samtaleforløb kan du over en længere periode snakke med den samme rådgiver. Her kan du få lov til at dele i et fortroligt rum, hvor der er plads til dig og alle dine tanker.", 
+
+"Når du ansøger om et samtaleforløb, bliver du matchet med en af vores frivillige rådgivere, der er relevant for din situation. Vi stræber efter at kunne svarer inden for 5-10 hverdage, hvorefter du vil få tilsendt en beviling med den rådgiver du har fået tildelt, deres telefonnummer og mulige tider for første samtale.", 
+
+"Et forløb består af 4 samtaler over telefonen, og du og din rådgiver planlægger samtalerne fra gang til gang, alt efter hvad der passer jer. Der vil være mulighed for at forlænge forløbet, hvis det der er behov for det.", 
+
+"Forløbet er gratis og fortroligt, og du kan ansøge uanset hvor i landet du bor.", 
+
+"Selvom forløbet er fortroligt, har vi dog stadig underretningspligt."
+  ]}
+ billede="src/assets/individuelt.png"
+  alt="Online"
+   knapTekst="Søg hjælp her"
+  baggrund="lys"
+  omvendt
+/>
+<!-- Online -->
+<Indhold
+  titel="Online rådgivning"
+  tekst={[
+    "Vi ved, at det kan kræve meget at søge hjælp, du har allerede taget det sværeste skridt ved at række ud, nu er det vores job at tage over. Hos Orfeus er det et mål at tilbyde rådgivning til så mange som overhovedet muligt. Derfor er der også vores målsætning at det at få hjælp skal være let tilgengængeligt for dig som pårøende. Vi benytter teams og telefoniske samtale til at nå ud til dig lige hvor du befinder dig i landet. Gruppesamtaler forgår også online, så alle kan være med og ingen bliver tabt på vejen."
+  ]}
+   billede="src/assets/online.png"
+  alt="Online rådgivning"
+  knapTekst="Kontakt os"
+  baggrund="green"
+  lysKnap
+/>
+<!-- Gruppe forløb -->
+<Indhold
+  titel="Gruppe rådgivning"
+
+tekst={[
+  "Som pårørende til et menneske med misbrug kan man føle sig alene. I vores gruppeforløb møder du andre i lignende situationer, hvor I kan dele erfaringer, spejle jer i hinanden og støtte hinanden.",
+
+  "Grupperne er opdelt efter relation og er blandt andet for forældre, partnere og voksne børn af mennesker med misbrug.",
+
+  "Et gruppeforløb består typisk af 6 møder på 2 timer og strækker sig over cirka 3 måneder. Gruppen mødes hver anden uge og ledes af 1-2 frivillige gruppeledere.",
+
+  "Samtalerne tager udgangspunkt i deltagernes egne oplevelser og behov. Der er derfor ikke et fast program, men plads til de emner, der fylder i gruppen.",
+
+  "Grupperne starter løbende, når der er nok tilmeldte. Får du tilbudt en plads, kommer du på venteliste og får besked, når en gruppe starter.",
+
+  "Alt, hvad der deles i gruppen, behandles fortroligt. Vi har dog fortsat den lovpligtige underretningspligt.",
+
+  "Under gruppeforløbet opretter vi en Facebook-gruppe, hvor deltagerne kan holde kontakt og dele erfaringer mellem møderne.",
+
+  "Når forløbet slutter, kan gruppen fortsætte fællesskabet i et Microsoft Teams-rum, hvis der er ønske om det."
+]}
+
+  billede="src/assets/gruppe.png"
+  alt="Gruppe rådgivning"
+
+  knapTekst="BLIV EN DEL AF GRUPPEN"
+  link="#"
+
+  baggrund="orange"
+  omvendt={true}
+/>
+
+ <Intro
+  titel="Mød vores rådgivere"
+  tekst={[
+    "Vores rådgivere er her for at lytte, støtte og hjælpe dig, der står tæt på en person med misbrug."
+  ]}
+  logoTekst="RO"
+/>
+
+
+
+  <Indhold
+    titel="Dorte"
+    tekst={[
+      "Dorte er rådgiver hos RO og hjælper pårørende med at finde støtte og nye perspektiver i en svær situation."
+    ]}
+    billede="src/assets/møddorte.png"
+    alt="Dorte"
+    baggrund="lys"
+  />
+
+
+  <Indhold
+    titel="Jens"
+    tekst={[
+      "Jens er rådgiver hos RO og har fokus på at skabe et trygt rum, hvor der er plads til at tale åbent."
+    ]}
+    billede="src/assets/mødjens.png"
+    alt="Jens"
+    baggrund="orange"
+    omvendt={true}
+  />
+
+
+  <Indhold
+    titel="Klaus"
+    tekst={[
+      "Klaus rådgiver pårørende og hjælper med at sætte ord på de tanker og udfordringer, der kan følge med misbrug."
+    ]}
+    billede="src/assets/mødklaus.png"
+    alt="Klaus"
+    baggrund="lys"
+  />
+
+
+  <Indhold
+    titel="Lise"
+    tekst={[
+      "Lise møder pårørende med nærvær og forståelse og hjælper med at skabe overblik over den situation, man står i."
+    ]}
+    billede="src/assets/mødlise.png"
+    alt="Lise"
+    baggrund="green"
+    omvendt={true}
+  />
+
+
+  <Indhold
+    titel="Mads"
+    tekst={[
+      "Mads støtter pårørende i at finde deres egne grænser og passe bedre på sig selv."
+    ]}
+    billede="src/assets/mødmads.png"
+    alt="Mads"
+    baggrund="lys"
+  />
+
+
+  <Indhold
+    titel="Sofie"
+    tekst={[
+      "Sofie rådgiver mennesker, der står tæt på misbrug, med fokus på støtte, forståelse og nye perspektiver."
+    ]}
+    billede="src/assets/mødsofie.png"
+    alt="Sofie"
+    baggrund="orange"
+    omvendt={true}
+  />
+
+
+  <Indhold
+    titel="Tina"
+    tekst={[
+      "Tina hjælper pårørende med at få sat ord på det, der fylder, og finde vej i en svær situation."
+    ]}
+    billede="src/assets/mødtina.png"
+    alt="Tina"
+    baggrund="lys"
+  />
+</PageLayout>
+<style>
+.hjælp-hero {
+    background-color: var(--green);
+    color: white;
+    padding: 9rem 0 5rem;
+  }
+
+  .hjælp-hero h1 {
+    font-family: "Caveat", cursive;
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .hjælp-hero p {
+    max-width: 600px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.2rem;
+  }
+  </style>

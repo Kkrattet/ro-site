@@ -41,10 +41,11 @@ const knapClass = lysKnap ? "knap lys" : "knap";
       {tekst.map((afsnit: string) => (
         <p>{afsnit}</p>
       ))}
-
-      <a href={link} class={knapClass}>
-        {knapTekst}
-      </a>
+{knapTekst && (
+  <a href={link} class={knapClass}>
+    {knapTekst}
+  </a>
+)}
 
     </div>
 
@@ -68,22 +69,35 @@ const knapClass = lysKnap ? "knap lys" : "knap";
   }
 
   .indhold-grid {
-    display: grid;
-    grid-template-columns: 1.3fr 0.7fr;
-    gap: 5rem;
-    align-items: center;
-  }
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 5rem;
+  align-items: center;
+}
 
-  .indhold-grid img {
-    width: 100%;
-  }
+.indhold-grid.omvendt {
+  grid-template-columns: 0.7fr 1.3fr;
+}
+.indhold-grid img {
+  width: 448;
+  height: 636;
+}
+
 
   .indhold h2 {
     font-size: 2rem;
+    font-family: "Lexend Exa", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  
   }
+  .indhold p {
+  font-family: "Open Sans", sans-serif;
+}
 
   .lys-baggrund {
     background: var(--lys-green);
+    color: var(--green);
   }
 
   .green-baggrund {

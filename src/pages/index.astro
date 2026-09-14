@@ -28,8 +28,7 @@ import Intro from "../components/Intro.astro"
     "Hos Rådgivningen Orfeus kan du få gratis og anonym rådgivning."
   ]}
   knapTekst="Se vores rådgivning"
-  link="#omos"
-  logoTekst="RO"
+  link="#help"
 />
 
       <!-- TILBUD -->
@@ -75,12 +74,17 @@ import Intro from "../components/Intro.astro"
 <Indhold
   titel="Kender du det?"
   tekst={[
-    "Måske fylder din pårørendes misbrug mere og mere i din hverdag.",
-    "Det kan være svært at vide, hvad man skal gøre, og hvor grænsen går mellem at hjælpe og samtidig passe på sig selv."
+    
+    "Mange pårørende har levet med misbruget så længe, at det er blevet en del af hverdagen. Noget, man tilpasser sig. Noget, man lærer at navigere i uden rigtigt at tænke over det.",
+"Måske tæller du genstande. Lytter efter lyden af flasker. Mærker stemningen, så snart du træder ind ad døren. Eller kan høre på stemmen i telefonen, hvordan aftenen kommer til at blive.",
+"Nogle ved godt, at de er pårørende. Andre har aldrig tænkt på sig selv sådan – eller har aldrig haft et sprog for det, de oplever.",
+"Her kan du spejle dig i andres oplevelser, genkende det, du selv står i, og måske sætte ord på noget, der længe har været svært at forklare.",
+"Du er langt fra den eneste. Du er ikke alene.",
   ]}
   billede="src/assets/nogetatspejlesigi.png"
   alt="Person i naturen"
   knapTekst="Bliv klogere"
+  link="/spejlet"
   baggrund="lys"
 />
 
@@ -89,8 +93,10 @@ import Intro from "../components/Intro.astro"
 <Indhold
   titel="Få råd og tips"
   tekst={[
-    "Som pårørende kan det være svært at finde ud af, hvordan man bedst håndterer situationen.",
-    "Vi har samlet forskellige råd, som måske kan hjælpe dig."
+   "At være pårørende til et menneske med misbrug kan være svært at navigere i. Måske er du i tvivl om, hvad du skal gøre, hvad du kan sige eller hvor dine egne grænser går.",
+"Her finder du råd, viden og konkrete værktøjer til dig, der står tæt på misbrug. Om hvordan du kan passe på dig selv, sætte grænser, håndtere svære situationer og være i relationen uden at miste dig selv.",
+"Du kan også finde råd til specifikke situationer – når misbruget fylder derhjemme, når du er bekymret, når du skal tage en svær samtale, eller når du bare har brug for at vide, at det, du oplever, ikke er forkert eller unormalt.",
+"Du behøver ikke have alle svarene. Her kan du finde hjælp til at tage det næste skridt."
   ]}
   billede="src/assets/ingenskalståalene.png"
   alt="Skygge på en væg"
@@ -121,6 +127,7 @@ import Intro from "../components/Intro.astro"
   slideshow={true}
 
   knapTekst="Hør dem her"
+   link="/spejlet"
   baggrund="orange"
 />
 
@@ -129,7 +136,13 @@ import Intro from "../components/Intro.astro"
 <Indhold
   titel="Om foreningen"
   tekst={[
-    "Rådgivningen Orfeus arbejder for, at pårørende til mennesker med misbrug ikke skal stå alene."
+    "RO står for Rådgivningen Orfeus.",
+"Navnet kommer fra den græske myte om Orfeus, der mister sin store kærlighed og begiver sig ned i underverdenen for at hente hende tilbage. En fortælling om at elske et menneske, man har svært ved at nå og om selv at bevæge sig gennem noget mørkt for at holde fast i forbindelsen.",
+"Det er et billede på noget, mange pårørende kender. At elske et menneske, samtidig med at misbruget fylder. At håbe, bekymre sig og forsøge at holde fast, også når man selv bliver påvirket af det, der sker.",
+"Men hos RO behøver det ikke være så kompliceret.",
+"Det første, du møder hos os, er noget langt enklere: lidt RO i en ellers kaotisk situation.",
+"Vi rådgiver primært dig, der er pårørende til et menneske med misbrug. Men vi er også her for dig, der selv er i et misbrug og har brug for nogen at tale med.",
+"Hos RO behøver du ikke stå alene med det."
   ]}
   billede="src/assets/RO.png"
   alt="Rådgivningen Orfeus"
@@ -142,10 +155,15 @@ import Intro from "../components/Intro.astro"
 <Indhold
   titel="Mød rådgiverne"
   tekst={[
-    "Vores rådgivere har erfaring med at hjælpe mennesker, der står tæt på en person med misbrugsproblemer."
+    "De frivillige rådgivere er rygraden i RO. Det er dem, der hver dag er med til at drive vores rådgivning og gøre en forskel for mennesker, der lever tæt på afhængighed.",
+"Vi er en blandet flok med forskellige baggrunde, blandt andet terapeuter, socialrådgivere, sygeplejersker, studerende og meget mere. Vi kommer med forskellige fagligheder og perspektiver, men med det samme ønske: at møde mennesker med forståelse, nærvær og respekt.",
+"Størstedelen af vores rådgivere har selv personlige erfaringer med afhængighed i nære relationer. Derfor kan vi trække på både faglig viden og egne erfaringer i rådgivningen.",
+"For nogle gange er det netop kombinationen af det faglige og det menneskelige, der gør, at man føler sig set."
   ]}
-  advisor={true}
+  billede="src/assets/etmenneskeattalemed.png"
+  alt="Ingen skal stå alene"
   knapTekst="Mød os"
+  link="/help"
   baggrund="green"
   lysKnap
 />

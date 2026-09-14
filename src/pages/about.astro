@@ -1,6 +1,237 @@
 ---
-import { PageLayout } from "../layout/PageLayout.astro";
+import PageLayout from "../layout/PageLayout.astro";
+import Indhold from "../components/Indhold.astro";
 ---
-<PageLayout>
+
+<PageLayout title="Om os | RO">
+
+  <!-- TOP -->
+  <section class="om-hero">
+    <div class="container">
+      <h1>Om RO</h1>
+      <p>
+        Vi er her for mennesker, der lever tæt på afhængighed.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- HVORFOR ORFEUS -->
+  <section class="om-sektion">
+    <div class="container om-tekst">
+
+      <h2>Hvorfor hedder vi Orfeus?</h2>
+
+      <p>
+        Orfeus er den græske sagnhelt, der drager til dødsriget
+        for at hente sin elskede tilbage, men i sidste ende ikke
+        kan ændre skæbnen.
+      </p>
+
+      <p>
+        For os er Orfeus et billede på, hvordan kærligheden kan
+        få én til at gå meget langt. Mange pårørende strækker sig
+        langt ud over deres egne grænser for at hjælpe en person,
+        de holder af, ud af et misbrug.
+      </p>
+
+      <p>
+        Myten handler også om at give slip på kontrollen.
+        Som pårørende kan man ikke styre, om eller hvornår et andet
+        menneske stopper med at bruge rusmidler.
+      </p>
+
+      <p>
+        I RO hjælper vi med at flytte fokus tilbage på dig selv,
+        dine grænser og det liv, du gerne vil leve.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- HVEM ER VI -->
+  <Indhold
+    titel="Hvem er vi?"
+    tekst={[
+      "RO består af mennesker med forskellige faglige og personlige baggrunde.",
+      "Vores rådgivere har blandt andet erfaring inden for terapi, socialt arbejde, sundhed og frivillig rådgivning.",
+      "Mange af vores rådgivere har også selv erfaring med afhængighed i nære relationer.",
+      "Fælles for os er ønsket om at møde mennesker med forståelse, nærvær og respekt."
+    ]}
+    advisor={true}
+    knapTekst="Mød vores rådgivere"
+    link="/help"
+    baggrund="green"
+    lysKnap
+  />
+
+
+  <!-- BESTYRELSE -->
+  <section class="bestyrelse">
+    <div class="container">
+
+      <h2>RO's bestyrelse</h2>
+
+      <p class="intro">
+        Bestyrelsen arbejder frivilligt og er med til at udvikle
+        RO og sætte retningen for foreningen.
+      </p>
+
+      <div class="bestyrelse-grid">
+
+        <article>
+          <h3>Maria Sahl</h3>
+          <p class="rolle">Forperson</p>
+          <p>
+            Maria har mange års erfaring med udsatte mennesker
+            og arbejdet inden for rusmiddelområdet.
+          </p>
+        </article>
+
+        <article>
+          <h3>Peter Brolund</h3>
+          <p class="rolle">Næstforperson</p>
+          <p>
+            Peter er socialrådgiver og har mange års erfaring
+            med behandling og rådgivning.
+          </p>
+        </article>
+
+        <article>
+          <h3>Jan Lund Pedersen</h3>
+          <p class="rolle">Kasserer</p>
+          <p>
+            Jan har erfaring med socialt arbejde og har selv
+            erfaring som pårørende.
+          </p>
+        </article>
+
+        <article>
+          <h3>Heidi Topholt</h3>
+          <p class="rolle">Frivilligrepræsentant</p>
+          <p>
+            Heidi repræsenterer de frivillige og har selv været
+            rådgiver i både individuelle samtaler og gruppeforløb.
+          </p>
+        </article>
+
+        <article>
+          <h3>Louise Brodthagen Jensen</h3>
+          <p class="rolle">Pårørenderepræsentant</p>
+          <p>
+            Louise repræsenterer målgruppen og bidrager med sit
+            perspektiv og sin egen erfaring som pårørende.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
 
 </PageLayout>
+
+
+<style>
+
+  .om-hero {
+    background-color: var(--green);
+    color: white;
+    padding: 9rem 0 5rem;
+  }
+
+  .om-hero h1 {
+    font-family: "Caveat", cursive;
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .om-hero p {
+    max-width: 600px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.2rem;
+  }
+
+
+  /* HVORFOR ORFEUS */
+
+  .om-sektion {
+    padding: 5rem 0;
+    color: var(--tekst);
+  }
+
+  .om-tekst {
+    max-width: 900px;
+  }
+
+  .om-sektion h2 {
+    color: var(--green);
+    font-family: "Lexend Exa", sans-serif;
+    margin-bottom: 2rem;
+  }
+
+  .om-sektion p {
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+  }
+
+
+  /* BESTYRELSE */
+
+  .bestyrelse {
+    padding: 6rem 0;
+    background-color: var(--lys-green);
+    color: var(--tekst);
+  }
+
+  .bestyrelse h2 {
+    color: var(--green);
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 2rem;
+  }
+
+  .intro {
+    max-width: 700px;
+    margin-bottom: 3rem;
+  }
+
+  .bestyrelse-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .bestyrelse article {
+    background-color: white;
+    padding: 2rem;
+  }
+
+  .bestyrelse h3 {
+    color: var(--green);
+    margin-bottom: 0.3rem;
+  }
+
+  .rolle {
+    color: var(--orange);
+    font-weight: bold;
+  }
+
+  .bestyrelse article p {
+    line-height: 1.6;
+  }
+
+
+  /* MOBIL */
+
+  @media (max-width: 700px) {
+    .om-hero h1 {
+      font-size: 2rem;
+    }
+
+    .bestyrelse-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

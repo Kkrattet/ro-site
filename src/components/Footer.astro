@@ -1,41 +1,38 @@
+---
+import logo from "../assets/RO-LYS.svg";
+---
+
 <footer>
 
   <div class="footer-indhold">
 
     <div class="footer-logo">
-      <strong>RO</strong>
-
-      <p>
-        Rådgivningen Orfeus
-      </p>
+      <a href="/">
+        <img src={logo.src} alt="RO logo" />
+      </a>
     </div>
-
 
     <div>
       <h3>Kontakt</h3>
 
-      <p>
-        Telefon: 12 34 56 78
-      </p>
-
-      <p>
-        kontakt@orfeus.dk
-      </p>
+      <p>Telefon: +45 70604640</p>
+      <p>kontakt@raadgivningen-orfeus.dk</p>
     </div>
+<div>
+  <h3>Find os</h3>
 
+  <p>
+    <a href="https://www.facebook.com/profile.php?id=61589656891665" target="_blank">
+      Facebook
+    </a>
+  </p>
 
-    <div>
-      <h3>Find os</h3>
-
-      <p>
-        Facebook
-      </p>
-
-      <p>
-        Instagram
-      </p>
-    </div>
-
+  <p>
+    <a href="https://www.instagram.com/raadgivningenorfeus/" target="_blank">
+      Instagram
+    </a>
+  </p>
+  </div>
   </div>
 
 </footer>
@@ -44,7 +41,6 @@
   footer {
     background: #244b32;
     color: white;
-
     padding: 4rem 0;
   }
 
@@ -55,24 +51,34 @@
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 3rem;
+    align-items: center;
   }
 
-  .footer-logo strong {
-    display: block;
-
-    font-size: 4rem;
-    font-weight: normal;
+  .footer-logo img {
+    width: 100px;
+    height: auto;
   }
 
   h3 {
     margin-top: 0;
     font-size: 0.9rem;
+    font-family: "Lexend Exa", sans-serif;
   }
 
   p {
     font-size: 0.8rem;
     line-height: 1.6;
+    font-family: "Open Sans", sans-serif;
   }
+  footer a {
+  color: white;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
 
   @media (max-width: 600px) {
     .footer-indhold {

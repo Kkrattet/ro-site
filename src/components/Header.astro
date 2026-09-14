@@ -1,22 +1,29 @@
+---
+import logo from "../assets/RO.svg";
+---
+
 <header>
   <div class="header-indhold">
 
-    <a href="/" class="logo">
-      RO
-    </a>
+  <a href="/" class="logo">
+  <img src={logo.src} alt="RO logo" />
+</a>
 
     <nav>
-      <a href="#raadgivning">
+      <a href="/help">
         Hjælp
       </a>
+      <a href="/spejlet">
+  Spejlet
+</a>
 
-      <a href="#">
-        Om os
-      </a>
+     <a href="/about">
+  Om os
+</a>
 
-      <a href="#">
-        Kontakt
-      </a>
+      <a href="/contact">
+  Kontakt
+</a>
     </nav>
 
   </div>
@@ -45,12 +52,10 @@
     align-items: center;
   }
 
-  .logo {
-    color: white;
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: bold;
-  }
+ .logo img {
+  width: 55px;
+  height: auto;
+}
 
   nav {
     display: flex;
@@ -62,6 +67,7 @@
     text-decoration: none;
     text-transform: uppercase;
     font-size: 0.8rem;
+    font-family: "Open Sans", sans-serif;
   }
 
   @media (max-width: 600px) {

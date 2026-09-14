@@ -10,6 +10,12 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -23,7 +29,6 @@ p {
 
 img {
   display: block;
-  max-width: 100%;
 }
 
 .container {
@@ -38,15 +43,14 @@ img {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.6rem 1rem;
-
   background: var(--green);
   color: white;
-
   text-decoration: none;
   text-transform: uppercase;
-
   font-size: 0.7rem;
   font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 8px;
 }
 
 .knap.lys {
