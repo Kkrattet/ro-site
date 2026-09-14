@@ -109,4 +109,23 @@ const knapClass = lysKnap ? "knap lys" : "knap";
     background: var(--orange);
     color: white;
   }
+  @media (max-width: 700px) {
+  .indhold-grid,
+  .indhold-grid.omvendt {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .indhold-grid.omvendt img {
+    order: 2;
+  }
+
+  .indhold-grid.omvendt .tekst {
+    order: 1;
+  }
+
+  .indhold {
+    padding: 4rem 0;
+  }
+}
 </style>

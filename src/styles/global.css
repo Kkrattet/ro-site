@@ -74,25 +74,10 @@ img {
 /* MOBIL */
 
 @media (max-width: 700px) {
-  .intro-grid,
-  .tilbud-grid,
-  .indhold-grid {
+  .tilbud-grid {
     grid-template-columns: 1fr;
   }
-
-  .indhold-grid.omvendt img {
-    order: 2;
-  }
-
-  .indhold-grid.omvendt .tekst {
-    order: 1;
-  }
-
   .hero {
     min-height: 500px;
-  }
-
-  .indhold {
-    padding: 4rem 0;
   }
 }

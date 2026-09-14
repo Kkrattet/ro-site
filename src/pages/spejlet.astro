@@ -9,7 +9,7 @@ import Indhold from "../components/Indhold.astro";
     <div class="container">
       <h1>Spejlet</h1>
       <p>
-        Mød andre pårørende, hør deres historier og få råd fra både
+        Hør personlige historier og få råd fra både
         pårørende og rådgivere.
       </p>
     </div>
@@ -19,18 +19,19 @@ import Indhold from "../components/Indhold.astro";
     <div class="container">
 
       <h2>Hør deres historier</h2>
+      <h3>- RO ligger stemmen til fire vigtige berretninger om livet som pårøende.</h3>
 
       <div class="video-grid">
 
         <article class="video-kort">
           <video controls>
-            <source src="/video/video1.mp4" type="video/mp4" />
+            <source src="src/assets/Pårørende Historier.mp4" type="video/mp4" />
           </video>
 
-          <h3>At være partner</h3>
+          <h3>Claes, Far</h3>
 
           <p>
-            En personlig fortælling om at stå tæt på et menneske med misbrug.
+            En personlig fortælling om at være far til en søn med et misbrug.
           </p>
         </article>
 
@@ -39,10 +40,10 @@ import Indhold from "../components/Indhold.astro";
             <source src="/video/video2.mp4" type="video/mp4" />
           </video>
 
-          <h3>At være forælder</h3>
+          <h3>Alberte, datter</h3>
 
           <p>
-            Om bekymringer, håb og om at lære at passe på sig selv.
+          En personlig fortælling om at vokse op tæt på afhængighed. 
           </p>
         </article>
 
@@ -51,10 +52,10 @@ import Indhold from "../components/Indhold.astro";
             <source src="/video/video3.mp4" type="video/mp4" />
           </video>
 
-          <h3>At være voksen barn</h3>
+          <h3>Vivi, datter</h3>
 
           <p>
-            En fortælling om at vokse op tæt på afhængighed.
+            En personlig fortælling om at miste barndommen til medafhænghed. 
           </p>
         </article>
 
@@ -63,10 +64,10 @@ import Indhold from "../components/Indhold.astro";
             <source src="/video/video4.mp4" type="video/mp4" />
           </video>
 
-          <h3>At finde sig selv igen</h3>
+          <h3>Ulla, Mor</h3>
 
           <p>
-            Om grænser, støtte og om at finde ro midt i det svære.
+            En personlig fortælling om at være Mor til en søn med et misbrug.
           </p>
         </article>
 
@@ -126,9 +127,15 @@ import Indhold from "../components/Indhold.astro";
     margin-bottom: 1rem;
   }
 
-  .spejlet-hero p {
+  .spejlet-hero h3 {
     max-width: 600px;
-    font-family: "DM Sans", sans-serif;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+  }
+   .spejlet-hero p {
+    max-width: 600px;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.2rem;
   }
 
@@ -142,7 +149,7 @@ import Indhold from "../components/Indhold.astro";
     font-family: "Caveat", cursive;
     font-size: 3rem;
     text-transform: uppercase;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 
   .video-grid {
@@ -158,9 +165,10 @@ import Indhold from "../components/Indhold.astro";
     background-color: black;
   }
 
-  .video-kort h3 {
+  .video-sektion h3 {
     margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
     color: var(--green);
     font-family: "DM Sans", sans-serif;
   }

@@ -1,8 +1,8 @@
 ---
-
 import logo2 from "../assets/RO-LYS.svg";
 
 const {
+  id,
   titel = "Ingen skal stå alene",
   tekst = [],
   knapTekst,
@@ -10,7 +10,7 @@ const {
 } = Astro.props;
 ---
 
-<section class="intro">
+<section id={id} class="intro">
   <div class="container intro-grid">
 
     <div>
@@ -28,9 +28,9 @@ const {
     </div>
 
     <div class="logo-stor">
-     <a href="/" class="logo">
-  <img src={logo2.src} alt="RO logo" />
-</a>
+      <a href="/" class="logo">
+        <img src={logo2.src} alt="RO logo" />
+      </a>
     </div>
 
   </div>
@@ -67,7 +67,22 @@ font-weight: 1000;
   }
 
   p {
-    max-width: 430px;
-    font-family: 'DM Sans', sans-serif;
+  max-width: 430px;
+  font-family: "Open Sans", sans-serif;
+}
+  @media (max-width: 700px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
+
+  .logo-stor img {
+    max-width: 200px;
+    margin-inline: auto;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
 </style>

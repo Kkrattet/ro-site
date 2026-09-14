@@ -10,7 +10,6 @@ import Intro from "../components/Intro.astro"
 
  <PageLayout>
     <main>
-
       <Hero
   titelLinje1="Pårørende"
   titelLinje2="til misbrug"
@@ -28,7 +27,7 @@ import Intro from "../components/Intro.astro"
     "Hos Rådgivningen Orfeus kan du få gratis og anonym rådgivning."
   ]}
   knapTekst="Se vores rådgivning"
-  link="#help"
+  link="/help"
 />
 
       <!-- TILBUD -->
@@ -101,6 +100,7 @@ import Intro from "../components/Intro.astro"
   billede="src/assets/ingenskalståalene.png"
   alt="Skygge på en væg"
   knapTekst="Læs mere"
+  link="/spejlet"
   baggrund="green"
   omvendt
   lysKnap
@@ -144,9 +144,10 @@ import Intro from "../components/Intro.astro"
 "Vi rådgiver primært dig, der er pårørende til et menneske med misbrug. Men vi er også her for dig, der selv er i et misbrug og har brug for nogen at tale med.",
 "Hos RO behøver du ikke stå alene med det."
   ]}
-  billede="src/assets/RO.png"
+  billede="src/assets/LOGO3.svg"
   alt="Rådgivningen Orfeus"
   knapTekst="Læs mere"
+  link="/about"
   baggrund="lys"
   omvendt
 />
@@ -163,7 +164,7 @@ import Intro from "../components/Intro.astro"
   billede="src/assets/etmenneskeattalemed.png"
   alt="Ingen skal stå alene"
   knapTekst="Mød os"
-  link="/help"
+  link="/help#raadgivere"
   baggrund="green"
   lysKnap
 />
@@ -183,7 +184,7 @@ import Intro from "../components/Intro.astro"
   alt="Ingen skal stå alene"
 
   knapTekst="BLIV EN DEL AF DET HER"
-  link="#"
+  link="/help"
 
   baggrund="orange"
   omvendt={true}
