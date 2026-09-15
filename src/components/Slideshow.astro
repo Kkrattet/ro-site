@@ -18,27 +18,35 @@
 </div>
 
 <script>
-  let slideIndex = 0;
-  let slides = document.querySelectorAll<HTMLElement>(".slide");
+let slideIndex = 0;
+// variabel starter på 0 - fordi det første slide har index 0
 
-  function slideshow() {
+let slides = document.querySelectorAll<HTMLElement>(".slide");
+// finder alle html elementer i slide klassen og gemmer dem i slides
 
-    slides.forEach((slide) => {
-      slide.style.display = "none";
-    });
+function slideshow() {
 
-    slides[slideIndex].style.display = "block";
+  slides.forEach((slide) => {
+    slide.style.display = "none";
+  });
+  // skjuler alle slides
 
-    slideIndex++;
+  slides[slideIndex].style.display = "block";
+  // viser det slide som passer til tallet i slideIndex, fx. hvis du er på slide nummer 2, ville den have index 1, fordi den starter på 0
 
-    if (slideIndex == slides.length) {
-      slideIndex = 0;
-    }
+  slideIndex++;
+  // tilføjer en til slideIndex, så tallet bliver en højere og næste billede er klar til at blive vist
+
+  if (slideIndex == slides.length) {
+    slideIndex = 0;
   }
+  // resetter slideIndex når alle slides er vist, altså hvis slideIndex er det samme som slides.length, så nulstiller den slideIndex og starter forfra
+}
 
   slideshow();
 
   setInterval(slideshow, 4000);
+  // skifter billede hvert 4 sekund
 </script>
 
 <style>
